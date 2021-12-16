@@ -37,7 +37,7 @@ class StoryMenuState extends MusicBeatState
 		['jump-around-town', 'swinging', 'fracture'],
 		['turned-around', 'jump-around-heck', 'not-swinging'],
 		['back-on-track', 'donuts', 'fractles'],
-		['lunar-wing', 'cored-out', 'cat']
+		['lunar-wing', 'cored-out', 'purr', 'ribed', 'underground', 'trickster', 'national-ussr', 'catico', 'national-memes']
 	];
 	var curDifficulty:Int = 2;
 
