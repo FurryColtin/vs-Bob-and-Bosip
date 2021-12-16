@@ -34,9 +34,9 @@ class StoryMenuState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
-		['jump-in', 'swing', 'split'],
-		['groovy brass', 'conscience', 'yap squad', 'intertwined'],
-		['copy-cat', 'jump-out', 'ronald mcdonald slide']
+		['jump-around-town', 'swinging', 'fracture'],
+		['turned-around', 'jump-around-heck', 'not-swinging'],
+		['back-on-track', 'donuts', 'fractles']
 	];
 	var curDifficulty:Int = 2;
 
@@ -60,7 +60,7 @@ class StoryMenuState extends MusicBeatState
 		"Orange",
 		"Blue",
 		"Sky",
-		"Ron"
+		"Corrupt"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -115,7 +115,7 @@ class StoryMenuState extends MusicBeatState
 		if (!FlxG.save.data.beatITB) {
 			weekUnlocked[3] = false;
 			weekCharacters[3] = 'Bob_and_Ron2';
-			weekColors[3] = 'Corrupt';
+			weekColors[3] = 'Ron'; //Corrupt
 			weekNames[3] = ["questionMark", '170', '291'];
 		}
 		#if windows
