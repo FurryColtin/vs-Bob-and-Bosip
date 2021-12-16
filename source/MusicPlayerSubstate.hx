@@ -66,11 +66,11 @@ class MusicPlayerSubstate extends MusicBeatSubstate
 		songNames.push('menu');
 		iconArray.push('bob');
 		songLength++;
-
-		bpms.push(110);
-		songsToPlay.push(Paths.music('oldmenuIntro'));
-		songNames.push('old menu');
-		iconArray.push('bob');
+		
+		bpms.push(126);
+		songsToPlay.push(Paths.music('cutscene_night'));
+		songNames.push('unfinished');
+		iconArray.push('bob-cool');
 		songLength++;
 
 		bpms.push(76);
@@ -84,18 +84,6 @@ class MusicPlayerSubstate extends MusicBeatSubstate
 			songsToPlay.push(Paths.music('cutscene_day'));
 			songNames.push('cutscene day');
 			iconArray.push('bob');
-			songLength++;
-
-			bpms.push(102);
-			songsToPlay.push(Paths.music('cutscene_night'));
-			songNames.push('cutscene night');
-			iconArray.push('amor');
-			songLength++;
-
-			bpms.push(95);
-			songsToPlay.push(Paths.music('walk'));
-			songNames.push('walk');
-			iconArray.push('bosip');
 			songLength++;
 		}
 		
