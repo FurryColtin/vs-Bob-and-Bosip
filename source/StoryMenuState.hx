@@ -36,23 +36,26 @@ class StoryMenuState extends MusicBeatState
 		['Tutorial'],
 		['jump-around-town', 'swinging', 'fracture'],
 		['turned-around', 'jump-around-heck', 'not-swinging'],
-		['back-on-track', 'donuts', 'fractles']
+		['back-on-track', 'donuts', 'fractles'],
+		['lunar-wing', 'cored-out', 'cat']
 	];
 	var curDifficulty:Int = 2;
 
-	var weekUnlocked:Array<Bool> = [true, true, true, true];
+	var weekUnlocked:Array<Bool> = [true, true, true, true, true];
 
 	var weekCharacters:Array<String> = [
 		'Bf and Gff',
 		'bob and bosip',
 		'ITB',
-		'Bob_and_Ron'
+		'Bob_and_Ron',
+		'nobody'
 	];
 
 	var weekNames:Array<Dynamic> = [
 		["tutorialText", '169', '292'],
 		["bobandbosipText", '175', '239'],
 		["inthebackgroundText", '170', '231'],
+		["bobtakeoverText", '170', '231'],
 		["bobtakeoverText", '170', '231']
 	];
 
@@ -113,10 +116,10 @@ class StoryMenuState extends MusicBeatState
 			weekNames[2] = ["lockedOutITB", '170', '291'];
 		}
 		if (!FlxG.save.data.beatITB) {
-			weekUnlocked[3] = false;
-			weekCharacters[3] = 'Bob_and_Ron2';
-			weekColors[3] = 'Ron'; //Corrupt
-			weekNames[3] = ["questionMark", '170', '291'];
+			weekUnlocked[4] = false;
+			weekCharacters[4] = 'nobody';
+			weekColors[4] = 'Ron'; //Corrupt
+			weekNames[4] = ["questionMark", '170', '291'];
 		}
 		#if windows
 		// Updating Discord Rich Presence
