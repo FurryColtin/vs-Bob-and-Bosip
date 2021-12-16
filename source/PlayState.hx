@@ -124,7 +124,8 @@ class PlayState extends MusicBeatState
 		'Tutorial',
 		'B&B',
 		'ITB',
-		'BT'
+		'BT',
+		'MM'
 	];
 	#end
 
@@ -133,8 +134,10 @@ class PlayState extends MusicBeatState
 
 	public static var dad:Character;
 	var dad2:Character;
+	var dad3:Character;
 	var useCamChange:Bool = true;
 	var hasDad2:Bool = false;
+	var hasDad3:Bool = false;
 	var usesDad2Chart:Bool = false;
 	public static var gf:Character;
 	public static var boyfriend:Boyfriend;
@@ -358,7 +361,7 @@ class PlayState extends MusicBeatState
 			case 2:
 				storyDifficultyText = "Hard";
 			case 3:
-				storyDifficultyText = "EX";
+				storyDifficultyText = "EXTREME";
 		}
 
 		iconRPC = SONG.player2;
@@ -442,10 +445,10 @@ class PlayState extends MusicBeatState
 					];
 				case 'jump-out':
 					dialogue = CoolUtil.coolTextFile(Paths.txt('jump-out/gloopy'));
-				case 'ronald-mcdonald-slide':
-					dialogue = CoolUtil.coolTextFile(Paths.txt('ronald mcdonald slide/haha'));
+				case 'lunar-wing':
+					dialogue = CoolUtil.coolTextFile(Paths.txt('lunar-wing/dialo'));
 					if (obsIsOpen) {
-						dialogue = CoolUtil.coolTextFile(Paths.txt('ronald mcdonald slide/hahaifoundu'));
+						dialogue = CoolUtil.coolTextFile(Paths.txt('lunar-wing/funni'));
 					}
 				case 'senpai':
 					dialogue = CoolUtil.coolTextFile(Paths.txt('senpai/senpaiDialogue'));
@@ -1748,7 +1751,7 @@ class PlayState extends MusicBeatState
 					}
 				case 'jump-out':
 					schoolIntro(doof);
-				case 'ronald-mcdonald-slide':
+				case 'lunar-wing':
 					schoolIntro(doof);
 				case 'senpai':
 					schoolIntro(doof);
