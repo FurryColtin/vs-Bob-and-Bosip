@@ -49,10 +49,10 @@ class GallerySubstate extends MusicBeatSubstate
 	var twitterButton:FlxSprite;
 
 	var fanMadeCaptions:Array<String> = [
-		'@miinxinq',
-		'@tekaxkou',
-		'@chocodecorative',
-		'@actually_cotton',
+		'coltin hanging with bob',
+		'ron hates bobs raw steak',
+		'city trouble',
+		'pals under a tree',
 		'@meltical_meltic',
 		'@meltical_meltic',
 		'@meltical_meltic',
@@ -243,13 +243,13 @@ class GallerySubstate extends MusicBeatSubstate
 
 			if (!FlxG.save.data.beatITB) {
 				if (FlxG.save.data.beatWeek) {
-					officialCaptions[2] = 'beat In The Background to unlock!';
-					officialCaptions[3] = 'beat In The Background to unlock!';
-					officialCaptions[5] = 'beat In The Background to unlock!';
+					officialCaptions[2] = 'beat Memesters to unlock!';
+					officialCaptions[3] = 'beat Memesters to unlock!';
+					officialCaptions[5] = 'beat Memesters to unlock!';
 				} else {
-					officialCaptions[2] = 'beat ??? to unlock!';
-					officialCaptions[3] = 'beat ??? to unlock!';
-					officialCaptions[5] = 'beat ??? to unlock!';
+					officialCaptions[2] = 'beat UNKOWN_WEEK to unlock!';
+					officialCaptions[3] = 'beat UNKOWN_WEEK to unlock!';
+					officialCaptions[5] = 'beat UNKOWN_WEEK to unlock!';
 				}
 				officialCaptionColors[2] = FlxColor.WHITE;
 				officialCaptionColors[3] = FlxColor.WHITE;
@@ -258,9 +258,9 @@ class GallerySubstate extends MusicBeatSubstate
 
 			if (!FlxG.save.data.beatBob) {
 				if (FlxG.save.data.beatITB)
-					officialCaptions[6] = 'beat Bob Takeover to unlock!';
+					officialCaptions[6] = 'beat rounded battle to unlock!';
 				else
-					officialCaptions[6] = 'beat ??? to unlock!';
+					officialCaptions[6] = 'beat UNKOWN_WEEK to unlock!';
 				officialCaptionColors[6] = FlxColor.WHITE;
 			}
 		
