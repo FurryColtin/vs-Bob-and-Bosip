@@ -164,6 +164,11 @@ class MainMenuState extends MusicBeatState
 		}
 		} else {
 			switch (random) {
+				case 11:
+					character = new Character(2000, 300, 'abungus');
+					targetX = 651;
+					curCharacter = 'abungus';
+					colorPalette = 'gloopy';
 				case 10:
 					character = new Character(2000, 300, 'cerberus');
 					targetX = 650;
@@ -224,6 +229,8 @@ class MainMenuState extends MusicBeatState
 		easterEggChance = FlxG.random.int(0, 50);
 		var deadrontwigger:Bool = false;
 		var pctrigger:Bool = false;
+		var deadtrigger:Bool = false;
+		var hugtrigger:Bool = false;
 		if (easterEggChance == 25) {
 			character = new Character(2000, 300, 'pc');
 			targetX = 760;
@@ -502,10 +509,11 @@ class MainMenuState extends MusicBeatState
 				
 			}
 			vocals.volume = 0;
-			//vocals.play();
+			vocals.play();
 			vocals.time = FlxG.sound.music.time;
 			if (useCharacter2){
 				vocals2.volume = 0;
+				vocals2.play();
 				vocals2.time = FlxG.sound.music.time;
 			}
 		} else
