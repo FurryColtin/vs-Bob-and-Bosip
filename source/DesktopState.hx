@@ -149,6 +149,11 @@ class DesktopState extends MusicBeatState
 			achievementArray.push('unlocked EX difficulty in freeplay! (previously beat week 1)');
 			FlxG.save.data.unlockedEX = true;
 		}
+		/*if (FlxG.save.data.beatITB) {
+			achievementArray.push('GG You finished week 2 you dont get an award lol');
+		//	FlxG.save.data.unlockedEX = true;
+		}
+		*/
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
 		var goldFolderCheck:Bool = true;
 		for (i in 0...initSonglist.length)
@@ -167,7 +172,7 @@ class DesktopState extends MusicBeatState
 				if (Highscore.getScore(songHighscore, diff) > 0)
 					songsUnlocked[i] = true;
 			}
-			if (data[0] == 'ronald mcdonald slide' || data[0] == 'jump-out') {
+			if (data[0] == 'donuts' || data[0] == 'fractles') {
 				if (Highscore.getMissesString(songHighscore, 2) == 'N/A')
 					goldFolderCheck = false;
 			} else {
@@ -291,6 +296,7 @@ class DesktopState extends MusicBeatState
 		var sprite5:FlxSprite = new FlxSprite().loadGraphic(Paths.image('desktop/notepadIcon'), false, 0, 0, true);
 		var sprite6:FlxSprite = new FlxSprite().loadGraphic(Paths.image('desktop/recordIcon'), false, 0, 0, true);
 		var sprite7:FlxSprite = new FlxSprite().loadGraphic(Paths.image('desktop/coolIcon'), false, 0, 0, true);
+	//	var sprite8:FlxSprite = new FlxSprite().loadGraphic(Paths.image('desktop/coolIcon'), false, 0, 0, true);
 		
 		var sprFolder:FlxExtendedSprite = new FlxExtendedSprite(307.5, 65, sprite.graphic);
 		folders.add(sprFolder);
@@ -310,8 +316,8 @@ class DesktopState extends MusicBeatState
 		var sprFolder6:FlxExtendedSprite = new FlxExtendedSprite(307.5, 195, sprite6.graphic);
 		folders.add(sprFolder6);
 
-		var sprFolder7:FlxExtendedSprite = new FlxExtendedSprite(738, 260, sprite7.graphic);
-		folders.add(sprFolder7);
+	//	var sprFolder7:FlxExtendedSprite = new FlxExtendedSprite(738, 260, sprite7.graphic);
+	//	folders.add(sprFolder7);
 
 		if (FlxG.save.data.folders != null) {
 			loadFolders();
@@ -419,7 +425,7 @@ class DesktopState extends MusicBeatState
 							}
 							theText +=  '&' + i + '&\n';
 							switch (i.toLowerCase()) {
-								case 'jump-out' | 'ronald mcdonald slide':
+								case 'donuts' | 'fractles':
 									theText += '&-& ^hard^ &score:& ^' + Highscore.getScore(songHighscore, 2) + '^\n';
 									if (Highscore.getMissesString(songHighscore, 2) == '0')
 										theText += '&-& ^hard^ &misses:& *Cheater!*\n';
@@ -427,7 +433,7 @@ class DesktopState extends MusicBeatState
 										theText += '&-& ^hard^ &misses:& ^' + Highscore.getMissesString(songHighscore, 2) + '^\n';
 									else
 										theText += '&-& ^hard^ &misses:& *Clear!* &(' + Highscore.getMissesString(songHighscore, 2) + ')&\n';
-								case 'copy-cat':
+								case 'back-on-track':
 									theText += '&-& ^hard^ &score:& ^' + Highscore.getScore(songHighscore, 2) + '^\n';
 									if (Highscore.getMissesString(songHighscore, 2) == '0')
 										theText += '&-& ^hard^ &misses:& *Perfect!*\n';
@@ -568,7 +574,7 @@ class DesktopState extends MusicBeatState
 		new FlxTimer().start(0.5, function(tmr:FlxTimer)
 		{
 			if (MainMenuState.firsttimeSplitEX) {
-				achievementArray.push('unlocked 8-bit split in the sound test!');
+				achievementArray.push('unlocked core in song test! (soon will be playable lol)');
 				MainMenuState.firsttimeSplitEX = false;
 			}
 
